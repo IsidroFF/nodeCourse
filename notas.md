@@ -12,3 +12,5 @@ ser utilizada en una aplicacion
 >
 >**Exportar:** Para porder importar un modulo, este debe ser EXPORTARDO desde
 > su archivo de origen
+
+Es posible exportar diversas funciones de un solo archivo, y asignarlos a una constante en la aplicacion principal (mas menos~)
