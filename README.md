@@ -49,3 +49,25 @@ Contiene funcionalidades que permiten utilizar el sistema de archivos
 >     fs.rename();
 >     fs.renameSync();
 > ```
+
+---
+
+## NPM (node package manager)
+
+Es un contenedor de paquetes que pueden ser instalados en NodeJS
+
+> ``` bash
+>     npm install express //Instalar
+>     npm uninstall express //Desinstalar
+>     npm install express@4.15.2 //Instalar version específica
+> ```
+
+---
+
+## JSON
+
+Es un formato de texto usado para almacenar y transportar informacion
+
+- Permite almacenar objetos de JavaScript a texto
+- Los datos se representan como pares clave-valor 
+
