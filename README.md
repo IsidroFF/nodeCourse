@@ -2,11 +2,11 @@
 
 **Indice** 
 
-- [Modulos](##ModulosNodeJS)
-- [NPM](##NPM(nodepackagemanager))
-- [JSON](##JSON)
-- [Eventos](##Eventos)
-- [Promesas](##Promesas)
+- [Modulos](#Modulos-NodeJS)
+- [NPM](#NPM-node-package-manager)
+- [JSON](#JSON)
+- [Eventos](#Eventos)
+- [Promesas](#Promesas)
 
 ## Modulos NodeJS
 
