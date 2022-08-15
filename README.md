@@ -1,5 +1,13 @@
 # NOTAS DE NodeJS
 
+**Indice** 
+
+- [Modulos](##ModulosNodeJS)
+- [NPM](##NPM(nodepackagemanager))
+- [JSON](##JSON)
+- [Eventos](##Eventos)
+- [Promesas](##Promesas)
+
 ## Modulos NodeJS
 
 - Funcionalidad organizada en uno o vario archivos de JS que puede 
