@@ -138,3 +138,23 @@ la funcion externa
         console.log(mensajeRechazo)
     });
 ```
+
+### **Async-await**
+
+Permite escribir codigo asincrono, como si fuera codigo sincrono, haciendo mas
+sencilla su lectura y utilizacion
+
+``` javascript
+        async function realizarPedido(producto) {
+            try {
+                const respuesta = await ordenarProductor(producto); //Funciones asincrona
+                console.log('Respuesta recibida');
+                const respuestaProcesada = await procesarPedido(respuesta); //Funcion asincrona
+                console.log(respuestaProcesada);
+            } catch (error) {
+                console.log(error);
+            }
+        }
+
+        realizarPedido('tazas');
+```
