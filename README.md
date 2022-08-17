@@ -218,6 +218,18 @@ a una aplicacion o a un proceso especifico que se este ejecutandos
 
 Permite a NodeJS transmitir informacion con el protocolo HTTP
 
+```javascrip
+    const HTTP = require('http');
+
+    const SERVIDOR = HTTP.createServer((req, res) => {
+        res.end('Hola Mundo!');
+    })
+
+    const PUERTO = 3000;
+    SERVIDOR.listen(PUERTO, () => {
+        console.log(`Estoy escuchando en el puerto ${PUERTO}...`);
+    });
+```
 ---
 
 ## URL
