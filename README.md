@@ -10,6 +10,7 @@
 - [Modelo Cliente-Servidor](#modelo-cliente-servidor)
 - [HTTP](#http-hypertext-transfer-protocol)
 - [URL](#url)
+- [Routing](#routing)
 
 ## Modulos NodeJS
 
@@ -219,6 +220,7 @@ a una aplicacion o a un proceso especifico que se este ejecutandos
 Permite a NodeJS transmitir informacion con el protocolo HTTP
 
 ```javascrip
+    // ejemplo para iniciar un servidor http con NodeJS
     const HTTP = require('http');
 
     const SERVIDOR = HTTP.createServer((req, res) => {
@@ -260,4 +262,19 @@ Es posible encadenar valor argumentos clave-valor separandonolos con "&"
 
 Normante son utilizados para filtrar solicitudes GET
 
-### Modulo URL
+### Modulo URL 
+
+Herramienta para utilizar la informacion del URL 
+
+``` javascript
+    const url = new URL('https://www.ejemplo.org/cursos/programacion?ordenar=vistas&nivel=1');
+
+    console.log(url.hostname); // www.ejemplo.org
+    console.log(url.pathname); // /cursos/programacion
+    console.log(url.searchParams); // object URLSearchParams { 'ordenar' => 'vistas', 'nivel' => '1' }
+    console.log(url.searchParams.get('ordenar')); // vistas
+    console.log(url.searchParams.get('nivel')); // 1
+```
+---
+
+## Routing
