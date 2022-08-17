@@ -218,7 +218,7 @@ a una aplicacion o a un proceso especifico que se este ejecutandos
 
 Permite a NodeJS transmitir informacion con el protocolo HTTP
 
-```javascrip
+```javascript
     const HTTP = require('http');
 
     const SERVIDOR = HTTP.createServer((req, res) => {
