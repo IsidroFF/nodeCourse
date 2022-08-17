@@ -1,12 +1,15 @@
 # NOTAS DE NodeJS
 
-**Indice** 
-
-- [Modulos](#Modulos-NodeJS)
-- [NPM](#NPM-node-package-manager)
-- [JSON](#JSON)
-- [Eventos](#Eventos)
-- [Promesas](#Promesas)
+<font size = 5> **INDICE** </font>
+ 
+- [Modulos](#modulos-nodejs)
+- [NPM](#npm-node-package-manager)
+- [JSON](#json)
+- [Eventos](#eventos)
+- [Promesas](#promesas)
+- [Modelo Cliente-Servidor](#modelo-cliente-servidor)
+- [HTTP](#http-hypertext-transfer-protocol)
+- [URL](#url)
 
 ## Modulos NodeJS
 
@@ -70,11 +73,11 @@ Contiene funcionalidades que permiten utilizar el sistema de archivos
 
 Es un contenedor de paquetes que pueden ser instalados en NodeJS
 
-> ``` bash
->     npm install express //Instalar
->     npm uninstall express //Desinstalar
->     npm install express@4.15.2 //Instalar version específica
-> ```
+``` bash
+     npm install express //Instalar
+     npm uninstall express //Desinstalar
+     npm install express@4.15.2 //Instalar version específica
+```
 
 ---
 
@@ -158,3 +161,91 @@ sencilla su lectura y utilizacion
 
         realizarPedido('tazas');
 ```
+---
+
+## Modelo Cliente-Servidor
+
+Es la manera que usamos para acceder a internet  y obtener recursos
+e informacion
+- **Protocolo:** Conjunto de reglas que permiten transmitir informacion
+entre dispositivos de una red 
+
+### **Cliente**
+
+Navegador desde el cual se realizan solicitudes a un servidor
+
+### **Servidor**
+
+Programa que se ejecuta en un servidor fisico para ofrecer un servicio
+al cliente (enviar informacion)
+
+---
+
+## HTTP (HyperText Transfer Protocol)
+
+- *Solicitudes:* Cuando el cliente le pide alguna solicitud al servidor
+    - Metodo HTTP
+    - Path
+    - Version HTTP
+    - Headers
+    - Body
+
+- *Metodos:* Indica la intencion de la solicitud
+    - GET: Solicitar un recurso especifico
+    - POST: Crear un recurso especifico
+    - PUT: Modificar un recurso especifico
+    - DELETE: Eliminar un recurso especifico
+
+- *Respuesta:* Indica la intencion de la solicitud
+    - Codigo de estado
+    - Texto de estado
+    - Version de HTTP
+    - Headers
+    - Body
+
+- *Codigos de Estado:* Numeros de que indican si se ha completado
+exitosamente la solicitud HTTP
+    - Respuestas informativas: 100-199
+    - Respuestas satisfactorias: 200-299
+    - Redirecciones: 300-399
+    - Errores de los clientes: 400-499
+    - Errores de los servidores: 500-599
+
+- *Puerto:* Ubicacion virtual de sistema operativo en la cual se puede acceder 
+a una aplicacion o a un proceso especifico que se este ejecutandos
+
+### **Modulo HTTP**
+
+Permite a NodeJS transmitir informacion con el protocolo HTTP
+
+---
+
+## URL
+
+- *Estructura de un URL:* Direccion de un recurso en la web
+    **https://www.freeCodeCamp.org/espanol/**
+    - ***Protocolo (https://)***
+    - ***Subdominio (www.):*** Permite a los sitios web organizar y 
+    separar la informacion para distintos propositos
+    - ***Dominio (freeCodeCamp):*** Es una referencia unica a un 
+    sitio web en internet
+    - ***Top-level domain (.org)***
+    - ***Path (/espanol/):*** Archivo o directorio en el servidor web
+
+- *Parametros de ruta:* Forman parte del URL, e indican el sitio dentro
+del dominio web en donde nos encontramos
+
+- *Parametros query (consulta):* Son utilizados para obtener contenido dinamico, se encuentran dentro del URL diferenciados por "?", y representan
+informacion en un formato clave-valor 
+
+> https://www.youtube.com/watch **?v=1hpc70_OoAg**
+> - Clave = v
+> - Valor = 1hpc70_OoAg
+
+Es posible encadenar valor argumentos clave-valor separandonolos con "&"
+
+> ?q=curso+de+node&sourceid=chrome&ie=UTF-8
+
+Normante son utilizados para filtrar solicitudes GET
+
+### Modulo URL
