@@ -278,3 +278,5 @@ Herramienta para utilizar la informacion del URL
 ---
 
 ## Routing
+
+Manejar las solicitudes del cliente en base a criterios especificos
