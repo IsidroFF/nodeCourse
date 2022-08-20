@@ -11,6 +11,7 @@
 - [HTTP](#http-hypertext-transfer-protocol)
 - [URL](#url)
 - [Routing](#routing)
+- [Express](#express)
 
 ## Modulos NodeJS
 
@@ -278,5 +279,22 @@ Herramienta para utilizar la informacion del URL
 ---
 
 ## Routing
-
+ 
 Manejar las solicitudes del cliente en base a criterios especificos
+
+- **Criterios:** Metodo de la solicitud http, que permite al servidor 
+identificar que tipo de operacion realizar
+---
+
+## Express
+
+### **API**
+
+Permite que un software ofrezca un servicio a otro software, no es usada
+directamente por el usuario sino por el programador que usa la API para
+implementar su programa
+
+### **REST**
+
+Estilo de arquitectura de software para sistemas hipermedia distribuidos
+como la world wide web
