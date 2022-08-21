@@ -2,6 +2,8 @@ const express = require('express');
 const {programacion} = require('../datos/cursos').infoCursos;
 const routerProgramacion = express.Router();
 
+routerProgramacion.use(express.json());
+
 //Cursos de programacion
 routerProgramacion.get('/', (req, res) => {
   res.send(programacion);
@@ -35,5 +37,47 @@ routerProgramacion.get('/:lenguaje/:nivel', (req, res) => {
 
   res.send(JSON.stringify(resultados));
 });
+
+routerProgramacion.post('/', (req, res) => {
+  let cursoNuevo = req.body;
+  programacion.push(cursoNuevo);
+  res.send(programacion);
+});
+
+routerProgramacion.put('/:id', (req, res) => {
+  const cursoActualizado = req.body;
+  const id = req.params.id;
+
+  const indice = programacion.findIndex(curso => curso.id == id);
+  if(indice >= 0){
+    programacion[indice] = cursoActualizado;
+  }
+  res.send(programacion);
+});
+
+routerProgramacion.patch('/:id', (req, res) => {
+  const infoActualizada = req.body;
+  const id = req.params.id;
+
+  const indice = programacion.findIndex(curso => curso.id == id);
+
+  if(indice >= 0){
+    const cursoMod = programacion[indice];
+    Object.assign(cursoMod, infoActualizada);
+  }
+
+  res.send(programacion);
+});
+
+routerProgramacion.delete('/:id', (req, res) => {
+  const id = req.params.id;
+
+  const indice = programacion.findIndex(curso => curso.id == id);
+
+  if(indice >= 0){
+    programacion.splice(indice,1);
+  }
+  res.send(programacion);
+})
 
 module.exports = routerProgramacion;
