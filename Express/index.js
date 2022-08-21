@@ -1,9 +1,15 @@
 const express = require('express');
 const app = express();
 
-const {infoCursos} = require('./cursos');
+const {infoCursos} = require('./datos/cursos');
 
-// routing
+//Router
+const routerProgramacion = require('./routers/programacion');
+app.use('/api/cursos/programacion', routerProgramacion);
+
+const routerMatematicas = require('./routers/matematicas');
+app.use('/api/cursos/matematicas', routerMatematicas);
+
 //Pagina principal
 app.get('/', (req, res) => {
   res.send('Mi primer servidor con express');
@@ -12,16 +18,6 @@ app.get('/', (req, res) => {
 //Pagina de cursos
 app.get('/api/cursos', (req,res) => {
  res.send(infoCursos);
-});
-
-//Cursos de programacion
-app.get('/api/cursos/programacion', (req,res) => {
-  res.send(infoCursos.programacion);
-});
-
-//Cursos de matematicas
-app.get('/api/cursos/matematicas', (req,res) => {
-  res.send(infoCursos.matematicas);
 });
 
 const PUERTO = process.env.PORT || 3000;
